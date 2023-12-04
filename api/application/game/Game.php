@@ -1,4 +1,7 @@
 <?php
+
+use function PHPSTORM_META\type;
+
 class Game
 {
 
@@ -37,6 +40,20 @@ class Game
 
     private function checkEnd($gamerMatchId) {
         return $this->db->checkEnd($gamerMatchId);
+    }
+
+    function randomItem() {
+        switch(rand(1,2)) {
+            case 1: {
+                $item = "bullet";
+                break;
+            };
+            case 2: {
+                $item = "weapon";
+                break;
+            }
+        }
+        return $item;
     }
 
 

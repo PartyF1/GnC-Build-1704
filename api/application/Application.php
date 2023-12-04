@@ -163,6 +163,10 @@ function updateScene() {
     return $this->game->updateScene($gamer->id,$gamer->matchId, $params['X'], $params['Y'], $params['rotation'], $params['x'], $params['y'], $params['gunRotation'], $params['gunArm'], $params['gunBack']);
 }*/
 
+function randomItem($params) {
+    return $this->game->randomItem();
+}
+
 function getScene($params){
     $user = $this->user->getUserByToken($params['token']);
     $gamer = $this->gamer->getGamer($user->id);
